@@ -1,0 +1,99 @@
+/* Tu CSS actualizado */
+
+.company-card {
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), #dbd2c2);
+    text-align: center; /* Alinear contenido al centro */
+}
+
+.company-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Para que el logo tenga forma circular */
+    margin-bottom: 10px;
+    position: relative; /* Posición relativa para z-index */
+    /* background: linear-gradient(to bottom, #ff9900, #ff6600); Ejemplo de fondo degradado */
+}
+
+
+
+.company-name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: rgb(70, 64, 46);
+    font-weight: bold;
+}
+
+.company-description {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: rgb(70, 64, 46);
+}
+
+.company-info {
+    margin-bottom: 10px;
+    font-size: 1.0rem;
+    color: rgb(85, 76, 50);
+}
+
+.additional-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Alinear imágenes al centro */
+    margin-top: 20px; /* Espacio entre imágenes y detalles de la empresa */
+}
+
+.additional-image {
+    width: 250px; /* Tamaño deseado para todas las imágenes adicionales */
+    height: 200px; /* Tamaño deseado para todas las imágenes adicionales */
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+}
+
+.additional-image:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+.additional-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.additional-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(87, 84, 64, 0.7);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease; /* Transición suave para mostrar la información */
+    opacity: 0; /* Oculta la información por defecto */
+}
+
+.additional-image:hover .additional-info {
+    opacity: 1; /* Muestra la información al hacer hover */
+}
+
+.additional-info h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.additional-info p {
+    margin: 5px 0 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre los botones */
+}

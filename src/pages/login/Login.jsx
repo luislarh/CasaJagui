@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import "./login.scss";
+import "./login.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
-
+import logo from "../../img/logoCasa.svg";
 
 const Login = () => {
   const [error, setError] = useState(false);
@@ -24,15 +24,27 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         dispatch({ type: "LOGIN", payload:user });
+      //   navigate("/");
+      // })
+      // .catch((error) => {
+      //   setError(true);
+      // });
+      if (email === "casajagui@admin.com" && password === "admin123$") {
+        // Redirige al dashboard del administrador
+        navigate("/admin");
+      } else {
+        // Redirige a la página de inicio u otra página que no sea de administrador
         navigate("/");
-      })
-      .catch((error) => {
-        setError(true);
-      });
+      }
+    })
+    .catch((error) => {
+      setError(true);
+    });
   };
 
   return (
     <div className="login">
+      <img src={logo} alt="Logo" className="login-logo" />
       <form onSubmit={handleLogin}>
         <h3>
           Inicia sesión<nav></nav>
@@ -50,7 +62,7 @@ const Login = () => {
         <button type="submit">Login</button>
         {error && <span>¡Correo o contraseña incorrectos!</span>}
       </form>
-      <p>¿No tienes una cuenta? <Link to="/register">Regístrate</Link></p>
+      <p style={{ color: 'black' }}>¿No tienes una cuenta? <Link to="/register">Regístrate</Link></p>
     </div>
   );
 };

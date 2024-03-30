@@ -43,35 +43,81 @@ export const userInputs = [
   ];
   
   export const productInputs = [
+
     {
-      id: 1,
-      label: "Title",
+      id: "name",
+      label: "Nombre",
       type: "text",
-      placeholder: "Apple Macbook Pro",
+      placeholder: "Nombre de la empresa",
     },
     {
-      id: 2,
-      label: "Description",
+      id: "description",
+      label: "Descripción",
       type: "text",
-      placeholder: "Description",
+      placeholder: "Descripción de la empresa",
     },
     {
-      id: 3,
-      label: "Category",
+      id: "categoria",
+      label: "Categoria",
       type: "text",
-      placeholder: "Computers",
+      placeholder: "empresa o restaurante",
     },
     {
-      id: 4,
-      label: "Price",
-      type: "text",
-      placeholder: "100",
+      id: "email",
+      label: "Correo",
+      type: "email",
+      placeholder: "Correo electrónico",
     },
     {
-      id: 5,
-      label: "Stock",
+      id: "contactName",
+      label: "Nombre del Encargado",
       type: "text",
-      placeholder: "in stock",
+      placeholder: "Nombre del Encargado",
+    },
+    {
+      id: "phoneNumber",
+      label: "Número de celular",
+      type: "tel",
+      placeholder: "Número de celular",
     },
   ];
-  
+
+  export const sliderInputs = [
+
+    {
+      id: "name",
+      label: "Nombre",
+      type: "text",
+      placeholder: "Nombre de la imagen",
+    },
+  ];
+
+  export const menuInputs = [
+
+    {
+      id: "name",
+      label: "Nombre",
+      type: "text",
+      placeholder: "Nombre del platillo",
+    },
+    {
+      id: "description",
+      label: "Descripción",
+      type: "text",
+      placeholder: "Descripción del platillo",
+    },
+    {
+      id: "precio",
+      label: "Precio",
+      type: "number",
+      placeholder: "Precio del platillo",
+    },
+    // {
+    //   id: "categoria",
+    //   label: "categoria",
+    //   type: "select",
+    //   options: ["Crepas y waffles", "Bebidas", "Comida", "Almuerzos"],
+    //   placeholder: "Selecciona la categoría",
+    //  // Esto indica que se permitirá la selección múltiple
+    // }
+  ];

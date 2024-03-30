@@ -1,0 +1,8 @@
+.single-column .col-md-auto, .single-column .col-md-4 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card-gradient {
+    background: linear-gradient(to bottom,#eee9e2c2, #f6f5dab3 );
+    /* border: none; Opcional: elimina el borde si prefieres un look más limpio */
+}

@@ -1,0 +1,61 @@
+/* footer.css */
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Esto hará que todo se apile verticalmente */
+  align-items: center; /* Alinea los elementos hijos al centro */
+  justify-content: space-between; /* Espacio entre el contenido y el desarrollador */
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px 0; /* Ajusta el padding según necesites */
+  box-sizing: border-box;
+}
+
+.footer-body {
+  width: 100%; /* Ocupa el ancho completo del contenedor padre */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-column, .logo-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons-container {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-line {
+  width: 80%; /* Ajusta según necesites para el efecto visual deseado */
+  border: none;
+  border-top: 1px solid #777;
+  align-self: center; /* Centra la línea en el pie de página */
+}
+
+.footer-developer {
+  text-align: center;
+  margin-top: 10px;
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+@media (max-width: 768px) {
+  .footer-body {
+    flex-direction: column;
+  }
+  
+  .footer-column, .logo-column {
+    align-items: center;
+  }
+}

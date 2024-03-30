@@ -1,8 +1,6 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
@@ -11,12 +9,14 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import FreeBreakfastIcon from '@mui/icons-material/FreeBreakfast';
+import ImageIcon from '@mui/icons-material/Image';
 import { Link, Navigate } from "react-router-dom";
-import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { getAuth, signOut } from "firebase/auth";
+
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/admin" style={{ textDecoration: "none" }}>
           <span className="logo">lamadmin</span>
         </Link>
       </div>
@@ -59,17 +59,29 @@ const Sidebar = () => {
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Products</span>
+              <span>Empresa</span>
             </li>
           </Link>
-          <li>
+          <Link to="/sliders" style={{ textDecoration: "none" }}>
+            <li>
+              <ImageIcon className="icon" />
+              <span>Slider</span>
+            </li>
+          </Link>
+          <Link to="/menu" style={{ textDecoration: "none" }}>
+            <li>
+              <FreeBreakfastIcon className="icon" />
+              <span>Menu</span>
+            </li>
+          </Link>
+          {/* <li>
             <CreditCardIcon className="icon" />
             <span>Orders</span>
           </li>
           <li>
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
-          </li>
+          </li> */}
           <p className="title">USEFUL</p>
           <li>
             <InsertChartIcon className="icon" />

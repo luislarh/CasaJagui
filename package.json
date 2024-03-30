@@ -3,16 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.4.4",
     "@mui/material": "^5.4.4",
     "@mui/x-data-grid": "^5.5.1",
+    "@nextui-org/react": "^2.2.10",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
     "firebase": "^10.8.0",
+    "framer-motion": "^11.0.15",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.10.2",
     "react-circular-progressbar": "^2.0.4",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
@@ -44,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }
